@@ -118,7 +118,7 @@ class Platformsh
 
             $this->execute("php bin/magento setup:di:compile-multi-tenant");
 
-        } catch (Exception $e)
+        } catch (\RuntimeException $e)
         {
             $this->execute("php bin/magento setup:di:compile");
         }
